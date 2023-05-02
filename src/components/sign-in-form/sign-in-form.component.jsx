@@ -31,6 +31,7 @@ const SignInForm = () => {
 
   const signInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
+
     await createUserDocumentFromAuth(user);
   };
 
@@ -42,7 +43,6 @@ const SignInForm = () => {
         email,
         password
       );
-      setCurrentUser(user);
 
       resetFormFields();
     } catch (error) {
@@ -80,7 +80,6 @@ const SignInForm = () => {
         />
         <FormInput
           label="Password"
-          Email="Password"
           type="password"
           required
           onChange={handlechange}

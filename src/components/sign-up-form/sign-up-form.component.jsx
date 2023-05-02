@@ -83,7 +83,6 @@ const SignUpForm = () => {
         />
         <FormInput
           label="Password"
-          Email="Password"
           type="password"
           required
           onChange={handlechange}
